@@ -41,7 +41,6 @@ var nullObj = null;
 //nullObj.age = 23; // Will throw TypeError; NPE; Means it is not defined yet. It is referring to nowhere
 
 
-
 // Empty List
 
 var list2 = [];

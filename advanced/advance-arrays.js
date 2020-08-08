@@ -1,6 +1,5 @@
 // Complete the below questions using this array:
-const array = [
-    {
+const array = [{
         username: "john",
         team: "red",
         score: 5,
@@ -30,14 +29,18 @@ const array = [
 //Create an array using forEach that has all the usernames with a "!" to each of the usernames
 let newArray = [];
 array.forEach(user => {
-    let { username } = user;
+    let {
+        username
+    } = user;
     newArray.push(`${username}!`);
 });
 console.log(newArray);
 
 //Create an array using map that has all the usernames with a "? to each of the usernames
 let mappedArray = array.map(user => {
-    let { username } = user;
+    let {
+        username
+    } = user;
     return `${username}?`;
 });
 console.log(mappedArray);
@@ -48,8 +51,8 @@ console.log(filteredArray);
 
 //Find out the total score of all users using reduce
 let totalScore = array
-                .map(user => user.score)
-                .reduce((total, score)=> total + score, 0);
+    .map(user => user.score)
+    .reduce((total, score) => total + score, 0);
 console.log("Total score", totalScore);
 
 // (1), what is the value of i? 0, 1, 2, 3, 4, 5
@@ -64,9 +67,8 @@ const newArray = arrayNum.map((num, i) => {
 //BONUS: create a new list with all user information, but add "!" to the end of each items they own.
 let bonusArray = array.map(user => {
     // map returns an array. and here we are updating the object value direclty.
-   user.items = user.items.map(item => item + "!");
-   return user;
+    user.items = user.items.map(item => item + "!");
+    return user;
 });
 
 console.log(bonusArray);
-
