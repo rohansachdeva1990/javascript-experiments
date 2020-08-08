@@ -1,7 +1,4 @@
-
-// Solve the below problems:
-
-// #1) Line up the Turtle and the Rabbit at the start line:
+// Line up the Turtle and the Rabbit at the start line:
 const startLine = '     ||<- Start line';
 let turtle = '🐢';
 let rabbit = '🐇';
@@ -28,19 +25,3 @@ turtle = turtle.trim().padEnd(9, '=');
 '     ||<- Start line'
 '🐢======='
 '       🐇'
-
-
-// #3) Get the below object to go from:
-let obj = {
-  my: 'name',
-  is: 'Rudolf',
-  the: 'raindeer'
-}
-// to this:
-'my name is Rudolf the raindeer'
-
-Object.entries(obj).map(value => value.join(" ")).join(' ')
-
-Object.entries(obj).reduce((str, value) => {
-    return str + value[0] + " " + value[1] + " ";
-}, "").trim() + ".";

@@ -82,5 +82,3 @@ const getData2 = async function() {
   }
   //In this case, for-await takes each item from the array and waits for it to resolve. You'll get the first response even if the second response isn't ready yet, but you'll always get the responses in the correct order.
 }
-
-
