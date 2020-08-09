@@ -3,6 +3,9 @@
 function retirement(retirementAge) {
     var a = ' years left until retirement.';
     return function(yearOfBirth) {
+
+        // We have access to 'a' via closures
+
         var age = 2016 - yearOfBirth;
         console.log((retirementAge - age) + a);
     }
@@ -21,6 +24,9 @@ retirementIceland(1990);
 
 function interviewQuestion(job) {
     return function(name) {
+
+        // We have access to 'job' via closures
+
         if (job === 'designer') {
             console.log(name + ', can you please explain what UX design is?');
         } else if (job === 'teacher') {

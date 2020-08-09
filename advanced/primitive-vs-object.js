@@ -1,4 +1,5 @@
-// Lecture: Primitives vs objects
+// Primitives vs objects
+
 // Primitives
 var a = 23;
 var b = a;

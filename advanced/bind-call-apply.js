@@ -1,7 +1,8 @@
 // Lecture: Bind, call and apply
+
 var john = {
     name: 'John',
-    age: 26,
+    age: 29,
     job: 'teacher',
     presentation: function (style, timeOfDay) {
         if (style === 'formal') {
@@ -10,7 +11,7 @@ var john = {
             console.log('Hey! What\'s up? I\'m ' + this.name + ', I\'m a ' + this.job + ' and I\'m ' + this.age + ' years old. Have a nice ' + timeOfDay + '.');
         }
     }
-};
+}
 
 var emily = {
     name: 'Emily',
@@ -20,12 +21,16 @@ var emily = {
 
 john.presentation('formal', 'morning');
 
+// Method Borrowing; we borrowed method from John and used it on Emily
 john.presentation.call(emily, 'friendly', 'afternoon');
 
-//john.presentation.apply(emily, ['friendly', 'afternoon']);
+// Apply is similar to call, but args are different
+//john.presentation.apply(emily , ['friendly', 'afternoon']);
 
+// Bind method, similar to call but bind doesn't immediately call the function
+// It returns the copy of the function
+// It allows us to preset some arguments, CURRYING!!
 var johnFriendly = john.presentation.bind(john, 'friendly');
-
 johnFriendly('morning');
 johnFriendly('night');
 
@@ -53,6 +58,14 @@ function isFullAge(limit, el) {
 }
 
 var ages = arrayCalc(years, calculateAge);
-var fullJapan = arrayCalc(ages, isFullAge.bind(this, 20));
+//var fullJapan = arrayCalc(ages, isFullAge.bind(this, 20));
+var isFullAgeJapan = isFullAge.bind(this, 20);
+var fullJapan = arrayCalc(ages, isFullAgeJapan);
 console.log(ages);
 console.log(fullJapan);
+
+
+// var ages = arrayCalc(years, calculateAge);
+// var fullJapan = arrayCalc(ages, isFullAge.bind(this, 20));
+// console.log(ages);
+// console.log(fullJapan);

@@ -1,7 +1,7 @@
 # javascript-experiments
 
-- basic
-- dom-manipulation
-- advanced
-- es-specifications
-- jQuery
+- [basic](/basic)
+- [dom-manipulation](/dom-manipulation)
+- [advanced](/advanced)
+- [es-specifications](/es-specifications)
+- [jQuery](/jQuery)
