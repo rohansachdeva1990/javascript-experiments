@@ -4,6 +4,8 @@ var john = {
     name: 'John',
     age: 29,
     job: 'teacher',
+
+    // This is a part of john object
     presentation: function (style, timeOfDay) {
         if (style === 'formal') {
             console.log('Good ' + timeOfDay + ', Ladies and gentlemen! I\'m ' + this.name + ', I\'m a ' + this.job + ' and I\'m ' + this.age + ' years old.');
