@@ -1,10 +1,11 @@
 /////////////////////////////////
 // Lecture: Arrays
 
-/*
+
 const boxes = document.querySelectorAll('.box');
 
 //ES5
+// Converting nodeList to array: HACK HACK HACK!!!
 var boxesArr5 = Array.prototype.slice.call(boxes);
 boxesArr5.forEach(function(cur) {
     cur.style.backgroundColor = 'dodgerblue';
@@ -26,9 +27,10 @@ for(var i = 0; i < boxesArr5.length; i++) {
     
 }
 
-
 //ES6
+// Of is used for arrays
 for (const cur of boxesArr6) {
+    // Just need to check blue
     if (cur.className.includes('blue')) {
         continue;
     }
@@ -36,11 +38,10 @@ for (const cur of boxesArr6) {
 }
 
 
-
-
 //ES5
 var ages = [12, 17, 8, 21, 14, 11];
 
+// Creating a boolean array
 var full = ages.map(function(cur) {
     return cur >= 18;
 });
@@ -50,8 +51,8 @@ console.log(full.indexOf(true));
 console.log(ages[full.indexOf(true)]);
 
 
-//ES6
+//ES6 - find and findIndex (similar to filter in Java)
 console.log(ages.findIndex(cur => cur >= 18));
 console.log(ages.find(cur => cur >= 18));
-*/
+
 
