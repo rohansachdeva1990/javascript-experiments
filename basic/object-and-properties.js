@@ -27,3 +27,10 @@ jane.firstName = 'Jane';
 jane.birthYear = 1969;
 jane['lastName'] = 'Smith';
 console.log(jane);
+
+// Empty Object
+var user2 = {};
+user2.name = "Rohan"
+
+var nullObj = null;
+//nullObj.age = 23; // Will throw TypeError; NPE; Means it is not defined yet. It is referring to nowhere
