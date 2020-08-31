@@ -5,3 +5,7 @@ function notAPureFunction(number) {
 function pureFunction(number) {
   return number * 2;
 }
+
+function isEligibleNP(age) {
+  return age > minAge;
+}
