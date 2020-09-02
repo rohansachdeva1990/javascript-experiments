@@ -13,5 +13,12 @@ __proto__: Object
 */
 
 Object.defineProperty(person, 'name', {
-  writable: false,
+  writable: false, // Can't be wriiten
+  enumerable: false, // Can't be iterated over
+  configurable: false, // Can't be deleted
 });
+
+// Won't work as it is readonly
+//person.name = 'John'
+Object.keys(person); // Won't show name
+delete person.name; // Won't delete this property

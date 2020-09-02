@@ -67,3 +67,52 @@ obj.__proto === Object.prototype; // Both refers to object base
 - Avoid extending Built-in Object!!!!!
 
 > Main idea of prototype is to avoid mutliple function objects creation for similars objects. This is an optimization at bare minimum.
+
+## Prototype Inheritance
+
+An inheritance example:-
+
+```javascript
+Circle // Child
+  - radius: 1
+  - __proto__: Shape  // Parent of Circle
+    - draw: f()
+    - __proto__:
+      - duplicate: f()
+      - constructor: f Shape()
+      - __proto__: Object // Parent of Shape
+
+```
+
+Technically,
+
+```javascript
+Obj o = new Obj(1); // Is equivalent to :-
+Obj o1 = new Obj.prototype.constructor(1);  // used when we want to dynamically create an object
+```
+
+> Whenever you reset the prototype, always reset the constructor.
+
+Intermediate Inheritance Functions
+
+```javascript
+// These are call intermediate inheritance functions
+function extend(Child, Parent) {
+  Child.prototype = Object.create(Parent.prototype);
+  Child.prototype.constructor = Child;
+}
+```
+
+- Polymorphism (Many - Forms)
+- When to use inheritance?
+  - Keep it simple, you don't need to over complicate things
+  - If you see the object characterstics are being repeated, then go ahead encapsulate those features in a generic object
+  - Avoid going more than one level of inheritance
+- Favor composition over inheritance
+  - We use mixins
+
+```javascript
+function mixin(target, ...sources) {
+  Object.assign(target, ...sources);
+}
+```

@@ -28,6 +28,7 @@ circle.draw();
  *
  * By default, 'this' refers to 'windows' environment in global scope.
  * but, within the constructor function it refers to the empty object being created
+ *
  */
 function Circle(radius) {
   console.log('this', this);
@@ -35,6 +36,9 @@ function Circle(radius) {
   this.draw = function () {
     console.log('draw');
   };
+
+  // we don't need to explicitly add a return state, it is done for us by JS implictly
 }
 
+// If we omit the 'new', then 'this' would refer to windows
 const anotherCircle = new Circle(1);
