@@ -116,3 +116,36 @@ function mixin(target, ...sources) {
   Object.assign(target, ...sources);
 }
 ```
+
+## Classes
+
+- ES6 Classes
+
+  - All the functions we add up in a classs will end up in prototype
+    - If you need to avoid define the method in the constructor
+  - Classes in JS are just syntactic sugar. They are essentially function
+    - typeof SomeClass => "function"
+    - Check babeljs.io, for live compile
+  - Classes enforce you to use "new" operator
+
+- Hoisting
+
+  - Hoisting means to move the methods to top, so that they are available wherever used in the function
+  - Function declaration is hoisted
+  - Function expression is not hoisted
+  - Class declaration and expression both are not hoisted
+
+  ```javascript
+  const c = new Circle(); // This wont compile
+
+  class Circle {}
+
+  const square = class {};
+  ```
+
+- Static Members
+- This keyword
+- Private Members
+- Getters and Setters
+- Inheritance
+- Method Overriding
