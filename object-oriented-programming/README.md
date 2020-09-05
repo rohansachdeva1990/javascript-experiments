@@ -195,3 +195,24 @@ function mixin(target, ...sources) {
 - Inheritance
 - Method Overriding
 - JS will look for move in Circle object, if it is not found it will look into prototype of Circle which is shape
+
+## Modules
+
+Things related should go together (Cohesion)
+
+- Modules
+
+  - Code becomes more maintainable
+  - Easier to reuse
+  - Abstract Code
+
+- Common JS Modules
+
+  - Used in NodeJs
+  - module.exports
+  - require(...); Relative path using './somejsfile' without extension
+
+- ES6 Modules
+  - default import without curly braces
+  - named import with curly braces
+  - A simple hack to get rid of webpack in html is to add script of type='module'
