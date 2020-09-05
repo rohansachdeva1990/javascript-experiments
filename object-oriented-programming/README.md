@@ -128,15 +128,36 @@ function mixin(target, ...sources) {
     - Check babeljs.io, for live compile
   - Classes enforce you to use "new" operator
 
+  ```javascript
+  class Circle {
+    constructor(radius) {
+      this.radius = radius;
+
+      // Not available in prototype
+      this.move = function () {
+        console.log('move');
+      };
+    }
+
+    /**
+     * Available in prototype
+     */
+    draw() {
+      console.log('draw');
+    }
+  }
+  ```
+
 - Hoisting
 
   - Hoisting means to move the methods to top, so that they are available wherever used in the function
   - Function declaration is hoisted
   - Function expression is not hoisted
-  - Class declaration and expression both are not hoisted
+  - Class declaration and expression both are not hoisted,
 
   ```javascript
   const c = new Circle(); // This wont compile
+  const s = new Square();
 
   class Circle {}
 
@@ -144,8 +165,33 @@ function mixin(target, ...sources) {
   ```
 
 - Static Members
+
+  - Mainly used for utilities
+  - Eg. Math.round() etc
+
+  ```javascript
+  class Math2 {
+    static abs(value) {}
+  }
+  Math2.abs(1213.2);
+  ```
+
 - This keyword
 - Private Members
+
+  - Idea is Abstraction
+    - Ways to implement private members
+      - Terrible one, add '\_' before your property
+      - Using ES6 symbols
+        - It is still kind off private
+        - computedPropertyName for private methods
+      - Using WeakMaps
+        - Keys not referenced will be garbage collected
+
 - Getters and Setters
+
+  - use get and set by ES6
+
 - Inheritance
 - Method Overriding
+- JS will look for move in Circle object, if it is not found it will look into prototype of Circle which is shape
