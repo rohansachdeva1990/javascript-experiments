@@ -15,5 +15,5 @@ c.draw();
 const draw = c.draw;
 console.log(draw);
 
-// This is a function call, its an standalone function
-draw(); //  here this will refer to window object
+// This is a function call,
+draw(); // => Refers to undefined

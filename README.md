@@ -1,8 +1,11 @@
 # javascript-experiments
 
-- [basic](/basic)
-- [dom-manipulation](/dom-manipulation)
-- [advanced](/advanced)
-- [es-specifications](/es-specifications)
-- [async-js](/async-js)
+- [Basics](/basic)
+- [Dom Manipulation](/dom-manipulation)
+- [Advanced](/advanced)
 - [jQuery](/jQuery)
+- [ES Specifications](/es-specifications)
+- [Asynchronous JS](/async-js)
+- [Object Oriented Programming](/object-oriented-programming)
+- [Functionial Programming](/functional-programming)
+- [RxJs](/rx-js)
