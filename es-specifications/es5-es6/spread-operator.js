@@ -29,31 +29,40 @@ const all = [h, ...boxes];
 
 Array.from(all).forEach(cur => (cur.style.color = 'purple'));
 
+// Yet another example
+const createTuple = (a, b, c, ...d) => {
+  return [[a, b], [c, d]];
+};
+createTuple('A', 'B', 'C', 'D', 'E');
+// [['A', 'B'], ['C', ['D', 'E']]]
+
 // // Spread operator also works on Object
 
-// const Person = function (name, age) {
-//   this.name = name;
-//   this.age = age;
-// };
+const Person = function(name, age) {
+  this.name = name;
+  this.age = age;
+};
 
-// Person.prototype.toString = () => {
-//   return `Name: ${this.name} and Age: ${this.age}`;
-// };
+Person.prototype.toString = () => {
+  return `Name: ${this.name} and Age: ${this.age}`;
+};
 
-// const state = {
-//   persons: [new Person('foo', 10), new Person('bar', 10)],
-// };
+const state = {
+  persons: [new Person('foo', 10), new Person('bar', 10)],
+};
 
-// const changeName = (name, toName) => {
-//   const personIndex = state.persons.findIndex(p => p.name === name);
-//   const person = {
-//     ...state.persons[personIndex],
-//   };
+const changeName = (name, toName) => {
+  const personIndex = state.persons.findIndex(p => p.name === name);
 
-//   person.name = toName;
-//   console.log(`Before update: ${state}`);
-//   state.persons[personIndex] = person;
-//   console.log(`After update: ${state}`);
-// };
+  // Creating a new object by cloning it and then updating the value
+  const person = {
+    ...state.persons[personIndex],
+  };
+  person.name = toName;
 
-// changeName('foo', 'foo2');
+  console.log(`Before update: ${state}`);
+  state.persons[personIndex] = person;
+  console.log(`After update: ${state}`);
+};
+
+changeName('foo', 'fooNewName');

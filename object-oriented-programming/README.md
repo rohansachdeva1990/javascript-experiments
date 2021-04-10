@@ -134,7 +134,7 @@ function mixin(target, ...sources) {
       this.radius = radius;
 
       // Not available in prototype
-      this.move = function () {
+      this.move = function() {
         console.log('move');
       };
     }
@@ -177,6 +177,12 @@ function mixin(target, ...sources) {
   ```
 
 - This keyword
+
+  - Whenever we call a instance method with object.method(), then 'this' reference is known within the function
+  - But, when we call an instance method from other scope for example on event handler, then this is not known
+  - If strict mode not enabled, the 'this' refers to windows.
+  - In Class, strict mode is by default enabled.
+
 - Private Members
 
   - Idea is Abstraction

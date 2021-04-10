@@ -9,7 +9,7 @@ const circle = {
     y: 1,
   },
 
-  // 'draw' is methods
+  // 'draw' is method
   draw: function () {
     console.log('draw');
   },

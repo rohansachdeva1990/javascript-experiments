@@ -26,6 +26,6 @@ When using modern javascript we need 2 types of tools:-
   - babel-preset-env
     - Plugins for every new JS plugin starting from ES6
 
-- Should be present as development dependencies
+- Should be present as development dependencies, not a part of production code
 
 ## Webpack
